@@ -1,0 +1,7 @@
+# description: identification of the STN chip
+@kind: adapter
+> STI
+< STN2120 v4.5.0
+<
+<>
+= value STN2120 v4.5.0

@@ -1,0 +1,8 @@
+# description: adapter buffer overflow after FF; the error token takes precedence over the incomplete message
+@rx_id: 77A
+> STPX H:710,D:22F187,R:1
+< 77A100E62F187344730
+< BUFFER FULL
+<
+<>
+= adapter_error BUFFER FULL

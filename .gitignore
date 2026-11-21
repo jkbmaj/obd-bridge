@@ -1,0 +1,17 @@
+# Raw OBD session logs: contain the VIN and control unit serial numbers
+data/sessions/
+
+# Derived files, reproducible from source data
+data/index.sqlite
+reports/
+
+# Probe files, environment and tool caches
+data/probes/
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Private local data: module catalog, notes and measurement baselines
+/baselines/
+/defs/
+/docs/

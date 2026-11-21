@@ -1,0 +1,7 @@
+# description: negative response 7F 22 31 (requestOutOfRange) with padding
+@rx_id: 77A
+> STPX H:710,D:22F1FF,R:1
+< 77A037F223155555555
+<
+<>
+= negative 7F2231

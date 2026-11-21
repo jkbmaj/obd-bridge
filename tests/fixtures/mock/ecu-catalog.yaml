@@ -1,0 +1,92 @@
+# SYNTHETIC TEST DATA. This is not a real vehicle catalog.
+#
+# Mock ECU catalog (schema obdb.ecu-catalog/1) used by the test suite in place
+# of the local, unpublished defs/ecu-catalog.yaml. It holds the modules used by
+# the probe plan (01, 02, 03, 17, 19, 34, 5F) and a few generic modules that
+# cover every protocol and confidence value. Names and CAN IDs outside the
+# standard OBD pairs (7E0/7E8, 7E1/7E9) and the gateway (710) are placeholders.
+# Module names must match tests/fixtures/mock/moduly-obdeleven.md.
+
+schema: obdb.ecu-catalog/1
+reply_offset: "06A"
+default_timeout_ms: 300
+sources:
+  can_ids: "synthetic test data"
+modules:
+  - address: "01"
+    name: Engine
+    protocol: uds
+    tx: "7E0"
+    rx: "7E8"
+    fc: auto
+    confidence: high
+  - address: "02"
+    name: Transmission
+    protocol: uds
+    tx: "7E1"
+    rx: "7E9"
+    fc: auto
+    confidence: high
+  - address: "03"
+    name: Brakes
+    protocol: uds
+    tx: "713"
+    fc: pair
+    confidence: high
+  - address: "05"
+    name: Mock TP20 Module A
+    protocol: tp20
+    confidence: medium
+  - address: "06"
+    name: Mock Unknown Module A
+    protocol: unknown
+    confidence: low
+  - address: "09"
+    name: Mock TP20 Module B
+    protocol: tp20
+    confidence: medium
+  - address: "15"
+    name: Mock UDS Module A
+    protocol: uds
+    tx: "750"
+    fc: pair
+    confidence: medium
+  - address: "17"
+    name: Instrument Cluster
+    protocol: uds
+    tx: "740"
+    fc: pair
+    confidence: high
+  - address: "19"
+    name: Gateway
+    protocol: uds
+    tx: "710"
+    fc: pair
+    timeout_ms: 1500
+    confidence: high
+  - address: "34"
+    name: Chassis
+    protocol: uds
+    tx: "741"
+    fc: pair
+    confidence: medium
+  - address: "47"
+    name: Mock KWP Module
+    protocol: kwp
+    confidence: low
+  - address: "5F"
+    name: Multimedia
+    protocol: uds
+    tx: "742"
+    fc: pair
+    confidence: medium
+  - address: "6C"
+    name: Mock UDS Module B
+    protocol: uds
+    tx: "751"
+    fc: pair
+    confidence: low
+  - address: "85"
+    name: Mock Unknown Module B
+    protocol: unknown
+    confidence: low

@@ -1,0 +1,8 @@
+# description: ATE0 sent with echo on; echo removed, outcome OK
+@kind: adapter
+> ATE0
+< ATE0
+< OK
+<
+<>
+= ok

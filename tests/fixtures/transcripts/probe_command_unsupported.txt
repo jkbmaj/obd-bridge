@@ -1,0 +1,7 @@
+# description: probing command not supported by the firmware
+@kind: adapter
+> STCSEGR0
+< ?
+<
+<>
+= unsupported

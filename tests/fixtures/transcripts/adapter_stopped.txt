@@ -1,0 +1,7 @@
+# description: adapter command interrupted before the prompt
+@kind: adapter
+> ATRV
+< STOPPED
+<
+<>
+= error STOPPED

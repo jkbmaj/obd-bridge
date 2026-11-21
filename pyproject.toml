@@ -1,0 +1,30 @@
+[project]
+name = "obd-bridge"
+version = "0.0.1a"
+description = "Read-only OBD/UDS diagnostic bridge for the STN2120 adapter and the Audi A6 C7"
+authors = [
+    { name = "Jakub Maj", email = "kontakt@jmaj.pl" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pyserial>=3.5,<4",
+    "ruamel-yaml>=0.18",
+    "typer>=0.29,<0.30",
+    "udsoncan>=1.26,<2",
+]
+
+[project.scripts]
+obdb = "obd_bridge.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]

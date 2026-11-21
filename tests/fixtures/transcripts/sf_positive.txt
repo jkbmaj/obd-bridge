@@ -1,0 +1,7 @@
+# description: gateway F1A3 (hardware version), SF with 0x55 padding
+@rx_id: 77A
+> STPX H:710,D:22F1A3,R:1
+< 77A0662F1A348303155
+<
+<>
+= positive 62F1A3483031

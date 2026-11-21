@@ -1,0 +1,7 @@
+# description: needs_r2 mode; the adapter ends the command cycle after 7F 22 78 without a final response
+@rx_id: 77A
+> STPX H:710,D:22F189,R:1
+< 77A037F227855555555
+<
+<>
+= pending_unresolved

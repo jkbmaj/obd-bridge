@@ -1,0 +1,9 @@
+# description: same_command mode; 7F 22 78 twice, then the final response in the same command cycle
+@rx_id: 77A
+> STPX H:710,D:22F189,R:1
+< 77A037F227855555555
+< 77A037F227855555555
+< 77A0762F18930303130
+<
+<>
+= positive 62F18930303130

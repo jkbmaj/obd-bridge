@@ -1,0 +1,10 @@
+# description: ATWS with echo on; ELM327 banner after empty lines
+@kind: adapter
+> ATWS
+< ATWS
+<
+<
+< ELM327 v1.3a
+<
+<>
+= value ELM327 v1.3a
